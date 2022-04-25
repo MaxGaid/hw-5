@@ -89,6 +89,16 @@ ul {
 .current {
   color: var(--accent-color-text);
 }
+.current::after {
+  display: flex;
+  position: absolute;
+  bottom: -1.2%;
+  content: '';
+  height: 4px;
+  width: 100%;
+  background-color: var(--accent-color-text);
+  border-radius: 2px;
+}
 
 .header-info {
   font-weight: 500;
@@ -119,6 +129,7 @@ ul {
 
 .header-item {
   margin-left: 50px;
+  position: relative;
 }
 .header-item:first-child {
   margin-left: 0px;
@@ -280,7 +291,7 @@ ul {
   display: inline-block;
   margin-top: 30px;
   transition-property: background-color;
-  transition-duration: 2500ms;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
@@ -548,6 +559,31 @@ ul {
   box-shadow: 1px 4px 8px 1px #00000029;
   box-shadow: 0px 4px 6px 1px #0000000f;
   box-shadow: 0px 1px 2px 1px #0000001f;
+}
+.work-cover-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.work-cover-text {
+  position: absolute;
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  height: 100%;
+  padding: 63px 24px;
+  top: 0;
+  left: 0;
+  letter-spacing: 0.03em;
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.work-item:hover .work-cover-text {
+  transform: translateY(0);
 }
 
 /* clinets */
